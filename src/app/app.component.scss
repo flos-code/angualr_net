@@ -1,0 +1,25 @@
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: lightgrey;
+  padding: 16px 64px;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+
+  .menu {
+    background-color: antiquewhite;
+    padding: 8px 16px;
+    width: 200px;
+  }
+
+  .router-container {
+    padding: 32px;
+  }
+}

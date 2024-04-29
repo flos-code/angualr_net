@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Created By</th>
+      <th>System</th>
+      <th>Date</th>
+      <th>Issue</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.createdBy }}</td>
+      <td>{{ order.system }}</td>
+      <td>{{ order.date | date : "medium" }}</td>
+      <td>{{ order.issue }}</td>
+      <td>{{ order.description }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="openAddOrder()" class="addOrder">Add Order</button>
+<app-add-order *ngIf="showAddOrder" (closeOrder)="handleCloseOrder()">
+</app-add-order>
